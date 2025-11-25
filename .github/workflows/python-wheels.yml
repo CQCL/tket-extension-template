@@ -133,7 +133,7 @@ jobs:
           echo "Testing the newly built ${{ matrix.platform.target }} wheels..."
           ls -lh dist || true
           if [ "$TEST_INSTALL" = "true" ]; then
-            uv run -f dist --with tket --refresh-package $PACKAGE_NAME --no-project -- python -c "import $MODULE_NAME"
+            uv run -f dist --with $PACKAGE_NAME --refresh-package $PACKAGE_NAME --no-project -- python -c "import $MODULE_NAME"
           fi
           uvx twine check --strict dist/*
         env:
