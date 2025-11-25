@@ -21,3 +21,6 @@ workspace = true
 derive_more = { workspace = true, features = ["display", "error", "from"] }
 itertools = { workspace = true }
 tket = { workspace = true }
+
+[dev-dependencies]
+criterion = "0.7.0"

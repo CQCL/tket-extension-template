@@ -70,7 +70,7 @@ The CI is already setup to build the Python wheels with all the native code comp
 There's three steps to implementing a new feature in your extension:
 
 1. Add new functions/methods/types to the main Rust library.
-  
+
     This should go in `rust/src/*.rs`.
 
 2. Add bindings for the new definitions.
@@ -94,5 +94,5 @@ the python environment and setup the pre-commit hooks.
 
 You can check that your extension is working at each step by running `just
 test`.
-   
+
 Check [DEVELOPMENT.md](https://github.com/CQCL/tket-extension-template/blob/main/DEVELOPMENT.md) for more details on working with the repository.

@@ -1,5 +1,6 @@
 """An example TKET extension."""
 
+from hugr.hugr.base import OpVarCov
 from ._bindings import ExampleError
 from ._bindings import RsHugr
 from ._bindings import example_remove_contents
@@ -7,7 +8,7 @@ from ._bindings import example_remove_contents
 from hugr import Hugr
 
 
-def remove_contents(hugr: Hugr) -> Hugr:
+def remove_contents(hugr: Hugr[OpVarCov]) -> Hugr[OpVarCov]:
     """Remove all contents from the Hugr.
 
     This function is provided only as an example.

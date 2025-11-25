@@ -18,7 +18,7 @@ test: test-rust test-python
 test-rust *TEST_ARGS: _check_nextest_installed
     cargo nextest r \
         --workspace \
-        --exclude 'python' \
+        --exclude 'rust-bindings' \
         --all-features \
         {{TEST_ARGS}}
 # Run the python tests.

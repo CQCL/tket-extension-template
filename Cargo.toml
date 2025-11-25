@@ -1,6 +1,7 @@
 [workspace]
 resolver = "2"
 members = ["rust", "python"]
+default-members = ["rust"]
 
 [workspace.package]
 # Common settings for all packages in the workspace

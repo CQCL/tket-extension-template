@@ -33,3 +33,21 @@ pub fn example_remove_contents(hugr: &mut Hugr) -> Result<(), ExampleError> {
 pub struct ExampleError {
     message: String,
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    use tket::Hugr;
+    use tket::hugr::ops::FuncDefn;
+    use tket::hugr::types::Signature;
+
+    #[test]
+    fn it_works() {
+        let mut hugr =
+            Hugr::new_with_entrypoint(FuncDefn::new("test", Signature::new(vec![], vec![])))
+                .unwrap();
+
+        example_remove_contents(&mut hugr).unwrap();
+    }
+}
