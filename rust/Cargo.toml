@@ -14,6 +14,11 @@ homepage = { workspace = true }
 repository = { workspace = true }
 license = { workspace = true }
 
+[lib]
+bench = false
+name = "tket_extension_template"
+path = "src/lib.rs"
+
 [lints]
 workspace = true
 

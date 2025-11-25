@@ -97,6 +97,9 @@ jobs:
             test-wheels: true
     steps:
       - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.10"
       - name: Set up uv
         uses: astral-sh/setup-uv@v7
         with:
@@ -145,6 +148,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+      - name: Run sccache-cache
+        uses: mozilla-actions/sccache-action@v0.0.9
       - name: Build sdist
         uses: PyO3/maturin-action@v1
         with:
