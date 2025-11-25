@@ -61,7 +61,10 @@ commit_parsers = [
 protect_breaking_commits = true
 
 [[package]]
-name = "rust"
-changelog_include = ["rust"]
-release = true
+name = "tket-extension-template"
 git_release_latest = true
+
+# Set this to `true` if you want to automatically generate PRs that update the
+# CHANGELOG, bump the package version, and release the package to crates.io when
+# merged.
+release = false
