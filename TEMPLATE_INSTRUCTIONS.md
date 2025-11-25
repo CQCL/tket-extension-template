@@ -7,13 +7,33 @@ guppy-generated hugrs.
 The template is a work in progress, so be sure to add an issue if you find any
 problems with it.
 
-## Steps for creating a new extension
+## Setting up a new repository
+
+0. Create a new Github repository for your extension using this one as a template.
 
 1. Replace all occurrences of `tket-extension-template` or `tket_extension_template` with your project's name.
 
 2. Ask someone on the Hugrverse team to create a @hugrbot token and add it as a `HUGRBOT_TOKEN` secret to the repository.
 
 3. Update the `README.md` files in the `rust` and `python` directories to reflect the details of your extension.
+
+### Github Repository Configuration
+
+These options ensure that the repository is configured correctly for the CI to run smoothly.
+
+- In General Settings > Pull Request, only allow "Squash and merge" for pull requests.
+    - Set the default commit message to the PR title and description.
+
+- In Rules > Ruleset create a new "Branch ruleset".
+    - Set enforcement status to "Active"
+    - Set target branch to the default branch of the repository.
+    - Select "Require linear history"
+    - Select "Require merge queue"
+    - Select "Require a pull request before merging"
+    - Select "Require status checks to pass" and enable the following checks (you may need to push a commit for the selector to populate):
+        - Required checks 🐍
+        - Required checks 🦀
+        - check-title / Validate Conventional Commit PR title
 
 ### Optional steps
 
